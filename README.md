@@ -51,4 +51,12 @@ Kör `setup.sh`
 ./setup.sh
 ```
 
+## Starta upp
 
+Kör playbook som kopierar över `docker-compose.yml` och kör docker-compose.
+
+```
+ansible-playbook -i inventory playbooks/homeassistant.yml
+```
+
+När den är klar så ska du kunna köra homeassistant onboardingen: http://<IP-adress>:8123
