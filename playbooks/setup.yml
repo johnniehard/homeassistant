@@ -37,6 +37,12 @@
         policy: deny
         direction: incoming
 
+    - name: UFW - Allow HA port
+      ufw:
+        rule: allow
+        port: "8123"
+        proto: tcp
+
     # Docker
     - name: Install a list of packages
       apt:

@@ -1,0 +1,19 @@
+- hosts: homeassistant
+
+  tasks:
+    - name: create directory
+      file:
+        path: /home/pi/homeassistant
+        state: directory
+        owner: pi
+
+    - name: Copy docker-compose.yml
+      copy:
+        src: ../docker-compose.yml
+        dest: /home/pi/homeassistant/docker-compose.yml
+
+    - name: Run docker-compose
+      docker_compose:
+        project_src: /home/pi/homeassistant
+        files: docker-compose.yml
+        state: present  w
