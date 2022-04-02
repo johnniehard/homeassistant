@@ -64,4 +64,3 @@ När den är klar så ska du kunna köra homeassistant onboardingen: http://[IP-
 ## TODO
 
 * Syncthing - synk/backup av config mappen
-* Tailscale - sätt upp tailscale för att kunna nå utanför lokala nätverket

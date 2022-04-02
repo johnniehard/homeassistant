@@ -1,0 +1,6 @@
+- name: Tailscale
+  hosts: homeassistant
+  roles:
+    - role: artis3n.tailscale
+      vars:
+        tailscale_authkey: "{{ lookup('env', 'TAILSCALE_KEY') }}"
