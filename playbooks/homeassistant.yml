@@ -1,4 +1,5 @@
 - hosts: homeassistant
+  become: true
 
   tasks:
     - name: create directory
@@ -16,4 +17,4 @@
       docker_compose:
         project_src: /home/pi/homeassistant
         files: docker-compose.yml
-        state: present  w
+        state: present

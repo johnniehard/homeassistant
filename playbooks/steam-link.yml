@@ -1,0 +1,8 @@
+- hosts: homeassistant
+  become: true
+
+  tasks:
+    - name: Install steamlink
+      apt:
+        name: [raspberrypi-ui-mods]
+        update_cache: yes
